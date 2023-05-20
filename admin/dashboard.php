@@ -27,11 +27,30 @@ include('includes/header.php');
     </a>
   </li>
   <li>
+    <a href="education.php">
+      Manage Educations
+    </a>
+  </li>
+  <li>
+    <a href="descs.php">
+      Manage Descriptions
+    </a>
+  </li>
+  <li>
     <a href="logout.php">
       Logout
     </a>
   </li>
+
+
 </ul>
+
+
+<div class="col" style="text-align: center;">
+  <a class="btnmsg" href="msg.php">
+    Manage Messages
+  </a>
+</div>
 
 <?php
 

@@ -18,8 +18,8 @@ if (isset($_POST['name'])) {
 
     $query = 'UPDATE skills SET
       name = "' . mysqli_real_escape_string($connect, $_POST['name']) . '",
-      percent = "' . mysqli_real_escape_string($connect, $_POST['percent']) . '",
-      url = "' . mysqli_real_escape_string($connect, $_POST['url']) . '"
+      // percent = "' . mysqli_real_escape_string($connect, $_POST['percent']) . '",
+      // url = "' . mysqli_real_escape_string($connect, $_POST['url']) . '"
       WHERE id = ' . $_GET['id'] . '
       LIMIT 1';
     mysqli_query($connect, $query);
@@ -62,7 +62,7 @@ include('includes/header.php');
 
   <br>
 
-  <label for="url">URL:</label>
+  <!-- <label for="url">URL:</label> //disabled
   <input type="text" name="url" id="url" value="<?php echo htmlentities($record['url']); ?>">
 
   <br>
@@ -70,7 +70,7 @@ include('includes/header.php');
   <label for="percent">Percent:</label>
   <input type="text" name="percent" id="percent" value="<?php echo htmlentities($record['percent']); ?>">
 
-  <br>
+  <br> -->
 
   <input type="submit" value="Edit Project">
 

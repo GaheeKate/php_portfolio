@@ -8,16 +8,13 @@ secure();
 //Check to see if the form has been submitted
 if (isset($_POST['name'])) {
   //Confirm required form data is complete
-  if ($_POST['name'] and $_POST['percent']) {
+  if ($_POST['name']) {
 
     $query = 'INSERT INTO skills (
-        name,
-        percent,
-        url
+        name
       ) VALUES (
-         "' . mysqli_real_escape_string($connect, $_POST['name']) . '",
-         "' . mysqli_real_escape_string($connect, $_POST['percent']) . '",
-         "' . mysqli_real_escape_string($connect, $_POST['url']) . '"
+        "' . mysqli_real_escape_string($connect, $_POST['name']) . '"
+
       )';
     mysqli_query($connect, $query);
 
@@ -41,15 +38,6 @@ include('includes/header.php');
 
   <br>
 
-  <label for="percent">Percent:</label>
-  <input type="text" name="percent" id="percent">
-
-  <br>
-
-  <label for="url">URL:</label>
-  <input type="text" name="url" id="url">
-
-  <br>
 
   <input type="submit" value="Add Skill">
 
